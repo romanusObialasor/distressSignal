@@ -1,8 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import Slider from "react-slick";
 
 const Fifth = () => {
+  const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    slidesToShow: 1,
+    speed: 500,
+    autoPlay: true,
+  };
+
   return (
     <Container id="fifth">
       <Top>
@@ -17,29 +27,52 @@ const Fifth = () => {
         <ArrowHolder>
           <BsChevronLeft />
         </ArrowHolder>
-        <Slider>
-          <Carusel>
-            <Box>
-              <BoxWrapper>
-                <Text>
-                  Its sometimes her behaviour are contented. Do listening am
-                  eagerness oh objection collected. Together gay feelings
-                  continue juvenile had off one.
-                </Text>
-                <Bottom>
-                  <Details>
-                    <Image src="/images/user.jpg" />
-                    <SubDetails>
-                      <Name>Romanus Obialasor</Name>
-                      <Proffesion>Web Developer</Proffesion>
-                    </SubDetails>
-                  </Details>
-                  <Qoutation>"</Qoutation>
-                </Bottom>
-              </BoxWrapper>
-            </Box>
-          </Carusel>
-        </Slider>
+        <CaruselSlider>
+          <Slider {...settings}>
+            <Carusel>
+              <Box>
+                <BoxWrapper>
+                  <Text>
+                    Its sometimes her behaviour are contented. Do listening am
+                    eagerness oh objection collected. Together gay feelings
+                    continue juvenile had off one.
+                  </Text>
+                  <Bottom>
+                    <Details>
+                      <Image src="/images/user.jpg" />
+                      <SubDetails>
+                        <Name>Romanus Obialasor</Name>
+                        <Proffesion>Web Developer</Proffesion>
+                      </SubDetails>
+                    </Details>
+                    <Qoutation>"</Qoutation>
+                  </Bottom>
+                </BoxWrapper>
+              </Box>
+            </Carusel>
+            <Carusel>
+              <Box>
+                <BoxWrapper>
+                  <Text>
+                    Its sometimes her behaviour are contented. Do listening am
+                    eagerness oh objection collected. Together gay feelings
+                    continue juvenile had off one.
+                  </Text>
+                  <Bottom>
+                    <Details>
+                      <Image src="/images/user.jpg" />
+                      <SubDetails>
+                        <Name>Romanus Obialasor</Name>
+                        <Proffesion>Web Developer</Proffesion>
+                      </SubDetails>
+                    </Details>
+                    <Qoutation>"</Qoutation>
+                  </Bottom>
+                </BoxWrapper>
+              </Box>
+            </Carusel>
+          </Slider>
+        </CaruselSlider>
         <ArrowHolder>
           <BsChevronRight />
         </ArrowHolder>
@@ -113,9 +146,9 @@ const ArrowHolder = styled.div`
   }
 `;
 
-const Slider = styled.div`
-  flex: 1;
-  display: flex;
+const CaruselSlider = styled.div`
+  width: 80%;
+  margin: auto;
 `;
 
 const Carusel = styled.div`
@@ -133,7 +166,7 @@ const Box = styled.div`
   border-radius: 10px;
   box-shadow: rgb(0 0 0 / 10%) 0px 26px 30px -10px,
     rgb(0 0 0 / 30%) 0px 16px 10px -10px;
-  @media screen and (max-width: 416px) {
+  @media screen and (max-width: 425px) {
     padding: 20px 0;
     height: 100%;
   }
