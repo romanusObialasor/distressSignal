@@ -87,8 +87,12 @@ const Header = () => {
           </Nav>
         </Navigators>
         <Right>
-          <Button1>Log in</Button1>
-          <Button>Sign up</Button>
+          <Button1 href="https://distress-signal.herokuapp.com/signin">
+            Log in
+          </Button1>
+          <Button href="https://distress-signal.herokuapp.com/signup">
+            Sign up
+          </Button>
         </Right>
         <Menu
           id="menu"
@@ -115,8 +119,12 @@ const Header = () => {
           <Nav2>Statistics</Nav2>
         </Navigator2>
         <Logs>
-          <Button2>Log in</Button2>
-          <Button3>Sign up</Button3>
+          <Button2 href="https://distress-signal.herokuapp.com/signin">
+            Log in
+          </Button2>
+          <Button3 href="https://distress-signal.herokuapp.com/signup">
+            Sign up
+          </Button3>
         </Logs>
         <Logo src="/images/logo.png" />
       </SideBar>
@@ -187,7 +195,7 @@ const Right = styled.div`
   }
 `;
 
-const Button = styled.div`
+const Button = styled.a`
   font-size: 14px;
   font-weight: 500;
   padding: 10px 20px;
@@ -196,17 +204,21 @@ const Button = styled.div`
   border-radius: 5px;
   cursor: pointer;
   transition: all 350ms;
+  text-decoration: none;
+  background: red;
+
   :hover {
     opacity: 0.7;
   }
 `;
 
-const Button1 = styled.div`
+const Button1 = styled.a`
   font-size: 14px;
   font-weight: 500;
   color: #0a58ed;
   cursor: pointer;
   transition: all 350ms;
+  text-decoration: none;
   margin-right: 20px;
   :hover {
     opacity: 0.7;
@@ -259,24 +271,29 @@ const Logs = styled.div`
   margin-top: 50px;
   text-align: center;
   flex: 0.8;
+  display: flex;
+  flex-direction: column;
 `;
 
-const Button2 = styled.div`
+const Button2 = styled.a`
   margin-top: 20px;
   padding: 10px 100px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 3px;
   color: #0a58ed;
+  text-decoration: none;
   font-weight: 500;
+  background: red;
 `;
 
-const Button3 = styled.div`
+const Button3 = styled.a`
   margin-top: 20px;
   padding: 10px 100px;
   background: #0a58ed;
   border-radius: 3px;
   color: white;
   font-weight: 500;
+  text-decoration: none;
 `;
 
 const Cancel = styled.div`
