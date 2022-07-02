@@ -205,7 +205,6 @@ const Button = styled.a`
   cursor: pointer;
   transition: all 350ms;
   text-decoration: none;
-  background: red;
 
   :hover {
     opacity: 0.7;
@@ -283,7 +282,6 @@ const Button2 = styled.a`
   color: #0a58ed;
   text-decoration: none;
   font-weight: 500;
-  background: red;
 `;
 
 const Button3 = styled.a`
