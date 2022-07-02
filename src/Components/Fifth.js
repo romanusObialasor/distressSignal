@@ -169,6 +169,13 @@ const Box = styled.div`
   @media screen and (max-width: 425px) {
     padding: 20px 0;
     height: 100%;
+    width: 250px;
+  }
+  @media screen and (max-width: 425px) {
+    transform: scale(0.7);
+  }
+  @media screen and (max-width: 360px) {
+    transform: scale(0.6);
   }
 `;
 
