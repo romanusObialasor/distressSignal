@@ -115,7 +115,7 @@ const Buttons = styled.div`
 const Button = styled.div`
   display: flex;
   align-items: center;
-  background: #0a58ed;
+  background: #161616;
   color: white;
   margin-right: 20px;
   border-radius: 5px;
@@ -128,6 +128,9 @@ const Button = styled.div`
   }
   @media screen and (max-width: 768px) {
     margin: 0;
+  }
+  @media screen and (max-width: 425px) {
+    transform: scale(0.9);
   }
 `;
 

@@ -235,7 +235,7 @@ const Menu = styled.div`
 const SideBar = styled.div`
   width: 0;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(2px);
   position: fixed;
   z-index: 1000;
@@ -258,7 +258,7 @@ const Navigator2 = styled.div`
 const Nav2 = styled.div`
   margin-top: 20px;
   padding: 10px 100px;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.4);
   border-radius: 3px;
 
   :hover {
