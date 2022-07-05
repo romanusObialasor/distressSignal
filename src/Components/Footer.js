@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <Container id="sixth">
+    <Container id="footer">
       <Curve />
       <Main>
         <LogoHolder>
@@ -58,7 +58,7 @@ const Container = styled.div`
 
 const Curve = styled.div`
   width: 105%;
-  background: white;
+  background: #f9faff;
   height: 400px;
   border-radius: 100%;
   position: absolute;

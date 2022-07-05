@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const Third = () => {
   return (
-    <Container id="third">
+    <Container id="services">
       <Left>
         <Image src="/images/second.png" />
       </Left>

@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import styled from "styled-components";
+import { animateScroll as scroll, Link } from "react-scroll";
+import { AiOutlineHome } from "react-icons/ai";
+import { MdOutlineFeaturedPlayList } from "react-icons/md";
+// import { IoPricetagOutline } from "react-icons/io";
+// import { BiStation } from "react-icons/bi";
+// import { GiStatic } from "react-icons/md";
 
 const Header = () => {
   const getHeader = document.getElementById("header");
-  const linksContainer = document.querySelector(".links-container");
+
+  const [scrollTop, setScrollTop] = useState(0);
+
+  const onScroll = () => {
+    const windowScroll = document.documentElement.scrollTop;
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+
+    const scrolled = (windowScroll / height) * 100;
+
+    setScrollTop(scrolled);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   window.addEventListener("scroll", function () {
     const scrollHeight = window.pageYOffset;
@@ -19,7 +43,7 @@ const Header = () => {
 
   const reveal = () => {
     const sideBar = document.getElementById("sideBar");
-    sideBar.style.width = "320px";
+    sideBar.style.width = "250px";
     const getMe = document.getElementById("menu");
     const getCancel = document.getElementById("cancel");
     getMe.style.display = "none";
@@ -35,56 +59,71 @@ const Header = () => {
     getCancel.style.display = "none";
   };
 
-  const scrollLinks = document.querySelectorAll(".scroll-link");
-  scrollLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      // prevent default
-      e.preventDefault();
-      // navigate to specific spot
-      const id = e.currentTarget.getAttribute("href").slice(1);
-      const element = document.getElementById(id);
-
-      const navHeight = getHeader.getBoundingClientRect().height;
-      const containerHeight = linksContainer.getBoundingClientRect().height;
-      const fixedNav = getHeader.classList.contains("fixed-nav");
-      let position = element.offsetTop - navHeight;
-
-      if (!fixedNav) {
-        position = position - navHeight;
-      }
-      if (navHeight > 82) {
-        position = position + containerHeight;
-      }
-
-      window.scrollTo({
-        left: 0,
-        top: position,
-      });
-      // close
-      linksContainer.style.height = 0;
-    });
-  });
-
   return (
-    <Wrapper id="header">
+    <Wrapper>
       <Container>
         <Left>
-          <Logo src="/images/logo.png" />
-          <Text>Distress</Text>
+          <Link
+            offset={-130}
+            activeClass="active"
+            to="home"
+            smooth={true}
+            duration={500}
+            style={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <Logo src="/images/logo.png" />
+            <Text>Distress</Text>
+          </Link>
         </Left>
-        <Navigators className="links-container">
-          <Nav href="#header" className="scroll-link">
-            Home
-          </Nav>
-          <Nav href="#second" className="scroll-link">
-            Features
-          </Nav>
-          <Nav href="#third" className="scroll-link">
-            Pricing
-          </Nav>
-          <Nav href="#fouth" className="scroll-link">
-            Statistics
-          </Nav>
+        <Navigators>
+          <Link
+            offset={-130}
+            activeClass="active"
+            to="home"
+            smooth={true}
+            duration={500}
+          >
+            <Nav>Home</Nav>
+          </Link>
+          <Link
+            offset={-130}
+            activeClass="active"
+            to="features"
+            smooth={true}
+            duration={500}
+          >
+            <Nav>Features</Nav>
+          </Link>
+          <Link
+            offset={-130}
+            activeClass="active"
+            to="services"
+            smooth={true}
+            duration={500}
+          >
+            <Nav>Services</Nav>
+          </Link>
+          <Link
+            offset={-130}
+            activeClass="active"
+            to="review"
+            smooth={true}
+            duration={500}
+          >
+            <Nav>Reviews</Nav>
+          </Link>
+          <Link
+            offset={-130}
+            activeClass="active"
+            to="footer"
+            smooth={true}
+            duration={500}
+          >
+            <Nav>Footer</Nav>
+          </Link>
         </Navigators>
         <Right>
           <Button1 href="https://distress-signal.herokuapp.com/signin">
@@ -112,11 +151,30 @@ const Header = () => {
         </Cancel>
       </Container>
       <SideBar id="sideBar">
+        <Logo1holder>
+          <Logo1 src="/images/logo.png" />
+        </Logo1holder>
+
         <Navigator2>
-          <Nav2>Home</Nav2>
-          <Nav2>Features</Nav2>
-          <Nav2>Pricing</Nav2>
-          <Nav2>Statistics</Nav2>
+          <Sideiconholder2>
+            <AiOutlineHome />
+            <Nav2>Home</Nav2>
+          </Sideiconholder2>
+
+          <Sideiconholder2>
+            <MdOutlineFeaturedPlayList />
+            <Nav2>Features</Nav2>
+          </Sideiconholder2>
+
+          <Sideiconholder2>
+            <MdOutlineFeaturedPlayList />
+            <Nav2>Pricing</Nav2>
+          </Sideiconholder2>
+
+          <Sideiconholder2>
+            <MdOutlineFeaturedPlayList />
+            <Nav2>Statistics</Nav2>
+          </Sideiconholder2>
         </Navigator2>
         <Logs>
           <Button2 href="https://distress-signal.herokuapp.com/signin">
@@ -126,13 +184,32 @@ const Header = () => {
             Sign up
           </Button3>
         </Logs>
-        <Logo src="/images/logo.png" />
       </SideBar>
     </Wrapper>
   );
 };
 
 export default Header;
+const Logo1holder = styled.div`
+  width: 250px;
+  height: 90px;
+`;
+
+const Sideiconholder2 = styled.div`
+  margin-top: 20px;
+  margin-left: 4px;
+  /* padding: 10px 30px; */
+  height: 30px;
+  width: 230px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  :hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+`;
 
 const Wrapper = styled.div`
   width: 100%;
@@ -154,6 +231,7 @@ const Container = styled.div`
 const Left = styled.div`
   display: flex;
   align-items: center;
+  cursor: pointer;
 `;
 
 const Logo = styled.img`
@@ -213,7 +291,7 @@ const Button = styled.a`
 
 const Button1 = styled.a`
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   color: #0a58ed;
   cursor: pointer;
   transition: all 350ms;
@@ -235,7 +313,7 @@ const Menu = styled.div`
 const SideBar = styled.div`
   width: 0;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
+  background: #202427;
   backdrop-filter: blur(2px);
   position: fixed;
   z-index: 1000;
@@ -243,8 +321,6 @@ const SideBar = styled.div`
   border-radius: 0 0 10px 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
   color: white;
   transition: all 350ms ease-in-out;
   overflow: hidden;
@@ -253,30 +329,32 @@ const SideBar = styled.div`
 const Navigator2 = styled.div`
   margin-top: 50px;
   text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 `;
 
 const Nav2 = styled.div`
-  margin-top: 20px;
-  padding: 10px 100px;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 3px;
-
-  :hover {
-    background: rgba(255, 255, 255, 0.2);
-  }
+  margin-left: 10px;
+  font-size: 12px;
 `;
 
 const Logs = styled.div`
   margin-top: 50px;
+  margin-left: 10px;
   text-align: center;
-  flex: 0.8;
+  /* flex: 0.3; */
+  justify-content: center;
   display: flex;
   flex-direction: column;
 `;
 
 const Button2 = styled.a`
-  margin-top: 20px;
-  padding: 10px 100px;
+  margin-top: 15px;
+  /* padding: 9px 20px; */
+  height: 30px;
+  width: 230px;
+
   background: rgba(255, 255, 255, 0.2);
   border-radius: 3px;
   color: #0a58ed;
@@ -286,7 +364,9 @@ const Button2 = styled.a`
 
 const Button3 = styled.a`
   margin-top: 20px;
-  padding: 10px 100px;
+  height: 30px;
+  width: 230px;
+  /* padding: 10px 12px; */
   background: #0a58ed;
   border-radius: 3px;
   color: white;
@@ -296,4 +376,11 @@ const Button3 = styled.a`
 
 const Cancel = styled.div`
   display: none;
+`;
+
+const Logo1 = styled.img`
+  height: 35px;
+  object-fit: contain;
+  margin-top: 35px;
+  margin-left: 14px;
 `;

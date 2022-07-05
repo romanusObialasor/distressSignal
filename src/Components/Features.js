@@ -7,7 +7,7 @@ import { FiMonitor } from "react-icons/fi";
 
 const Features = () => {
   return (
-    <Wrapper id="second">
+    <Wrapper id="features">
       <Container>
         <Left>
           <Head>Ever man are put down his very</Head>

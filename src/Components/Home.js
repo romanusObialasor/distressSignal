@@ -4,17 +4,17 @@ import { AiFillApple } from "react-icons/ai";
 
 const Home = () => {
   return (
-    <Container>
+    <Container id="home">
       <Left>
         <Title>
-          A Perfect <br />
-          Landing Page To <br />
-          Present Your App
+          Don't judge yourself <br />
+          by what others <br />
+          did to you.
         </Title>
         <SubText>
-          Surprise steepest recurred landlord mr wandered amounted of.
-          Continuing <br /> devonshire but considered its. Rose past oh shew
-          roof is
+          There are far too many silent sufferers. Not because they don't yearn
+          to reach out,
+          <br /> but because they've tried and found no one who cares.
         </SubText>
         <Buttons>
           <Button>
@@ -96,6 +96,9 @@ const Title = styled.div`
   font-size: 60px;
   font-family: "Acme", sans-serif;
   font-weight: 600;
+  @media screen and (max-width: 425px) {
+    font-size: 50px;
+  }
 `;
 
 const SubText = styled.div`
