@@ -12,9 +12,9 @@ const Home = () => {
           did to you.
         </Title>
         <SubText>
-          There are far too many silent sufferers. Not because they don't yearn
-          to reach <br />
-          out, but because they've tried and found no one who cares.
+          There are far too many silent sufferers. Not because they don't yearn{" "}
+          <br />
+          to reach out, but because they've tried and found no one who cares.
         </SubText>
         <Buttons>
           <Button>
