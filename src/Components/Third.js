@@ -16,8 +16,8 @@ const Third = () => {
             <br /> around the world
           </Head>
           <SubHead>
-            Easy mind life fact with see has bore ten. Parish any chatty
-            <br /> can elinor direct for former. Up as meant widow
+            Neutrality helps the oppressor, never the victim.
+            <br /> Silence encourages the tormentor, never the tormented.
           </SubHead>
           <Rest>
             <Box>
@@ -29,10 +29,10 @@ const Third = () => {
                 />
               </Icon>
               <Text>
-                <TopText>Shortly am waiting</TopText>
+                <TopText>carefree Childhood</TopText>
                 <BottomText>
-                  In show dull give need so held. One order all scale sense her
-                  gay style wrote.
+                  Childhood should be carefree, playing in the sun; not living a
+                  nightmare in the darkness of the soul.
                 </BottomText>
               </Text>
             </Box>
@@ -48,10 +48,11 @@ const Third = () => {
                 />
               </Icon>
               <Text>
-                <TopText>Shortly am waiting</TopText>
+                <TopText>People Cares</TopText>
                 <BottomText>
-                  In show dull give need so held. One order all scale sense her
-                  gay style wrote.
+                  There are far too many silent sufferers. Not because they
+                  don't yearn to reach out, but because they've tried and found
+                  no one who cares.
                 </BottomText>
               </Text>
             </Box>
@@ -64,10 +65,11 @@ const Third = () => {
                 />
               </Icon>
               <Text>
-                <TopText>Shortly am waiting</TopText>
+                <TopText>Comfort over Pain</TopText>
                 <BottomText>
-                  In show dull give need so held. One order all scale sense her
-                  gay style wrote.
+                  Of pain you could wish only one thing: that it should stop.
+                  Nothing in the world was so bad as physical pain. In the face
+                  of pain there are no heroes
                 </BottomText>
               </Text>
             </Box>

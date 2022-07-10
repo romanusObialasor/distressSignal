@@ -26,19 +26,19 @@ const Fouth = () => {
               </TNum>
             </Box>
             <Box>
-              <Number>20K+</Number>
+              <Number>45K+</Number>
               <TNum>
                 Number
                 <br />
-                of users
+                of cases cubed
               </TNum>
             </Box>
             <Box>
-              <Number>20K+</Number>
+              <Number>10+</Number>
               <TNum>
                 Number
                 <br />
-                of users
+                of NGO's
               </TNum>
             </Box>
           </Holder>

@@ -13,8 +13,8 @@ const Home = () => {
         </Title>
         <SubText>
           There are far too many silent sufferers. Not because they don't yearn
-          to reach out,
-          <br /> but because they've tried and found no one who cares.
+          to reach <br />
+          out, but because they've tried and found no one who cares.
         </SubText>
         <Buttons>
           <Button>

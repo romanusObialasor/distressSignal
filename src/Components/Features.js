@@ -10,16 +10,16 @@ const Features = () => {
     <Wrapper id="features">
       <Container>
         <Left>
-          <Head>Ever man are put down his very</Head>
+          <Head>Features we offer</Head>
           <SubHead>
-            Innovative Idea
-            <br /> for your app
+            We at Distress Signal
+            <br /> Care for you
           </SubHead>
           <RandomText>
-            By an outlived insisted procured improved am. Paid hill fine ten now
-            love even leaf. Supplied feelings mr of dissuade recurred no it
-            offering honoured. Am of of in collecting devonshire favourable
-            excellence. Her sixteen end ashamed cottage
+            As long as you keep secrets and suppress information, you are
+            fundamentally at war with yourself…The critical issue is allowing
+            yourself to know what you know. That takes an enormous amount of
+            courage.
           </RandomText>
           <Button>Get Now</Button>
         </Left>
@@ -32,12 +32,11 @@ const Features = () => {
                 }}
               />
             </Icon>
-            <Title>Unwilling departure</Title>
+            <Title>Easy to use</Title>
             <Text>
-              On no twenty spring of in esteem spirit likely estate. Continue
-              new you declared differed learning bringing honoured. At mean mind
-              so upon they rent am walk. am waiting inhabit smiling he dear
-              sure. State thing might stand one his plate. Offending
+              The human race tends to remember the abuses to which it has been
+              subjected rather than the endearments. What's left of kisses?
+              Wounds, however, leave scars
             </Text>
           </Box>
           <Box>
@@ -48,12 +47,12 @@ const Features = () => {
                 }}
               />
             </Icon>
-            <Title>Discovered had get</Title>
+            <Title>Safety first</Title>
             <Text>
-              In show dull give need so held. One order all scale sense her gay
-              style wrote. Incommode our not one ourselves residence. Shall
-              there whose those stand she end. So unaffected partiality
-              indulgence dispatched to of celebrated remarkably. Unfeeling are
+              I swore never to be silent whenever and wherever human beings
+              endure suffering and humiliation. We must take sides. Neutrality
+              helps the oppressor, never the victim. Silence encourages the
+              tormentor, never the tormented.
             </Text>
           </Box>
           <Box>
@@ -64,13 +63,12 @@ const Features = () => {
                 }}
               />
             </Icon>
-            <Title> Warmly warmth</Title>
+            <Title>Time Management</Title>
             <Text>
-              Ever man are put down his very. And marry may table him avoid.
-              Hard sell it were into it upon. He forbade affixed parties of
-              assured to me windows. Happiness him nor she disposing provision.
-              Add astonished principles precaution yet friendship stimulated
-              literature.
+              ... you don't have to wait for someone to treat you bad
+              repeatedly. All it takes is once, and if they get away with it
+              that once, if they know they can treat you like that, then it sets
+              the pattern for the future.
             </Text>
           </Box>
           <Box>
@@ -81,12 +79,12 @@ const Features = () => {
                 }}
               />
             </Icon>
-            <Title>Lorem Ipsum comes</Title>
+            <Title>On All Device</Title>
             <Text>
-              Ever man are put down his very. And marry may table him avoid.
-              Hard sell it were into it upon. He forbade affixed parties of
-              assured to me windows. Happiness him nor she disposing provision.
-              Add astonished principles
+              To those who abuse: the sin is yours, the crime is yours, and the
+              shame is yours. To those who protect the perpetrators: blaming the
+              victims only masks the evil within, making you as guilty as those
+              who abuse. Stand up for the innocent or go down with the rest.
             </Text>
           </Box>
         </Right>
