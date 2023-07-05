@@ -126,10 +126,10 @@ const Header = () => {
           </Link>
         </Navigators>
         <Right>
-          <Button1 href="https://distress-signal.herokuapp.com/signin">
+          <Button1 href="https://distress.vercel.app/signin">
             Log in
           </Button1>
-          <Button href="https://distress-signal.herokuapp.com/signup">
+          <Button href="https://distress.vercel.app/signup">
             Sign up
           </Button>
         </Right>
